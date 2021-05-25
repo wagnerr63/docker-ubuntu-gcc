@@ -4,9 +4,7 @@ WORKDIR /usr/src/app
 
 COPY app/ .
 
-RUN apt update && \
-    apt install build-essential -y
-
-RUN apt-get install manpages-dev -y
-
-RUN apt clean
+RUN apt-get update
+RUN apt-get install build-essential -y && \
+    apt-get install manpages-dev -y && \
+    apt-get clean
