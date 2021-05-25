@@ -9,3 +9,4 @@ RUN apt update && \
 
 RUN apt-get install manpages-dev -y
 
+RUN apt clean
